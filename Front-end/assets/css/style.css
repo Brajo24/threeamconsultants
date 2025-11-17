@@ -59,10 +59,16 @@ ul {
    ========================= */
 #about-page .about-section {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px; /* rounder corners */
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* stronger shadow */
   margin-bottom: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#about-page .about-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 #about-page ul#mission-list li {
@@ -78,10 +84,20 @@ ul {
 #our-approach,
 #why-partner {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px; /* rounder corners */
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* stronger shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#core-services:hover,
+#value-proposition:hover,
+#target-clients:hover,
+#our-approach:hover,
+#why-partner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 #core-services h3,
@@ -96,9 +112,15 @@ ul {
    ========================= */
 #contact-page section {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px; /* rounder corners */
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* stronger shadow */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#contact-page section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 #contact-page a {
@@ -110,6 +132,7 @@ ul {
 #contact-page a:hover {
   text-decoration: underline;
 }
+
 
 /* =========================
    Sidebar Base
@@ -215,5 +238,22 @@ body {
   }
   .sidebar.active {
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    padding: 1rem;
+  }
+
+  #about-page .about-section,
+  #core-services,
+  #value-proposition,
+  #target-clients,
+  #our-approach,
+  #why-partner,
+  #contact-page section {
+    padding: 1rem;
+    border-radius: 12px; /* slightly smaller for small screens */
   }
 }
