@@ -1,4 +1,119 @@
-/* Sidebar Base */
+/* =========================
+   Global Styles
+   ========================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #111827;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563; /* Gray-700 */
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* =========================
+   Page Container
+   ========================= */
+.page-container {
+  max-width: 1200px;
+  margin-left: 270px; /* leave space for sidebar */
+  padding: 2rem;
+  transition: margin-left 0.3s;
+}
+
+.page-container.fullwidth {
+  margin-left: 20px; /* when sidebar is hidden */
+}
+
+/* =========================
+   About Page
+   ========================= */
+#about-page .about-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+#about-page ul#mission-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Service Page
+   ========================= */
+#core-services,
+#value-proposition,
+#target-clients,
+#our-approach,
+#why-partner {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#core-services h3,
+#value-proposition li,
+#our-approach li,
+#why-partner li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Contact Page
+   ========================= */
+#contact-page section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#contact-page a {
+  color: #3b82f6; /* Blue-500 */
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+#contact-page a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Sidebar Base
+   ========================= */
 .sidebar {
   position: fixed;
   left: 0;
@@ -12,19 +127,16 @@
   transition: 0.3s;
 }
 
-/* Sidebar Open */
 .sidebar.active {
   transform: translateX(0);
 }
 
-/* Logo */
 .sidebar .logo {
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-/* Navigation Links */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -42,10 +154,9 @@
 }
 
 .nav-links li a:hover {
-  color: #3b82f6; /* Blue-500 */
+  color: #3b82f6;
 }
 
-/* Toggle Button */
 .toggle-btn {
   position: fixed;
   top: 20px;
@@ -61,4 +172,48 @@
 
 .toggle-btn:hover {
   background: #374151;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.footer {
+  background: #111827; /* Dark background */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative; /* allows sticky behavior */
+  bottom: 0;
+  width: 100%;
+  font-size: 0.875rem; /* small text */
+}
+
+/* If you want the footer to always stick at the bottom of the viewport */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1; /* makes content grow and push footer to bottom */
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 1024px) {
+  .page-container {
+    margin-left: 20px;
+  }
+  .sidebar {
+    transform: translateX(-260px);
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
 }
