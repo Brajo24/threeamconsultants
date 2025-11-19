@@ -106,6 +106,13 @@ ul {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+  /* Add visual separation between sections */
+        .about-section + .about-section {
+            border-top: 1px solid #e5e7eb;
+            margin-top: 2rem;
+            padding-top: 2rem;
+        }
+
 #about-page .about-section:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
