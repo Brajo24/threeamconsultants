@@ -26,3 +26,8 @@ function initSidebarToggle() {
     });
   }
 }
+
+document.getElementById("learn-more-btn")?.addEventListener("click", () => {
+    window.location.href = "about.html";
+});
+
