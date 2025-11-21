@@ -27,5 +27,24 @@ function initSidebarToggle() {
   }
 }
 
+// Highlight active sidebar link automatically
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+    
+    // Wait for navbar to load (since injected)
+    const checkLinks = setInterval(() => {
+        const links = document.querySelectorAll(".nav-links a");
+        
+        if (links.length > 0) {
+            links.forEach(link => {
+                const href = link.getAttribute("href").toLowerCase();
+                if (href.includes(currentPage)) {
+                    link.classList.add("active-link");
+                }
+            });
+            clearInterval(checkLinks);
+        }
+    }, 50); // checks until navbar is loaded
+});
 
 
