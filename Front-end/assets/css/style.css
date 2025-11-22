@@ -24,6 +24,15 @@ main {
 /* =========================
    Global Styles
    ========================= */
+/* FOOTER FIX — body must be flex container */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
 /* GLOBAL BACKGROUND IMAGE FOR ALL PAGES */
 body {
     background-image: url('../images/Home (2).png');
