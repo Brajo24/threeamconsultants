@@ -212,8 +212,9 @@ ul {
 }
 
 #about-page .about-section {
-    background: white;
-    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;      /* Soft professional border */
+    border-radius: 8px;             /* Smoother corners */
     padding: 2.5rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     margin: 2rem auto;
@@ -221,6 +222,7 @@ ul {
     width: 100%;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+
 
 .about-section + .about-section {
     border-top: 1px solid #e5e7eb;
@@ -262,77 +264,177 @@ ul {
     }
 }
 
-
 /* =========================
-   Service Page
+   Service Page – Improved Design
    ========================= */
+
+/* All sections styled as glass cards */
 #core-services,
 #value-proposition,
 #target-clients,
 #our-approach,
 #why-partner {
-  background: white;
-  border-radius: 4px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  
+  border-left: 4px solid #0ea5e9;  /* Modern accent border */
+  border-radius: 12px;
+
+  padding: 2rem 2.3rem;
+  margin: 2.5rem auto;
+
+  max-width: 900px;
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
+/* Hover animation */
 #core-services:hover,
 #value-proposition:hover,
 #target-clients:hover,
 #our-approach:hover,
 #why-partner:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
-#core-services h3,
+/* Section Titles */
+#core-services h2,
+#value-proposition h2,
+#target-clients h2,
+#our-approach h2,
+#why-partner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* Subheadings (h3 inside core-services) */
+#core-services h3 {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  color: #0f172a;
+  border-left: 3px solid #0ea5e9;
+  padding-left: 10px;
+}
+
+/* Lists */
+#core-services ul,
+#value-proposition ul,
+#our-approach ul,
+#why-partner ul {
+  margin-top: .8rem;
+  padding-left: 1.5rem;
+}
+
+#core-services li,
 #value-proposition li,
 #our-approach li,
 #why-partner li {
-  margin-bottom: 0.5rem;
+  margin-bottom: .6rem;
+  line-height: 1.6;
+  color: #374151;
 }
 
+/* Single paragraph section */
+#target-clients p {
+  line-height: 1.7;
+  margin-top: 1rem;
+  color: #374151;
+  font-size: 1.05rem;
+}
+
+
 /* =========================
-   Contact Page
+   Improved Contact Page
    ========================= */
+#contact-page {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+}
+
+/* Contact Card */
 #contact-information {
   background: white;
-  border-radius: 4px;
-  padding: 2rem;
+  border-radius: 12px;
+  padding: 2.5rem;
   margin: 3rem auto;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #contact-information:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
 }
 
-#contact-information h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+/* Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  margin-bottom: 2rem;
 }
 
-#contact-information p {
-  margin-bottom: 1rem;
+.contact-item h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 8px;
 }
 
-#contact-information a {
+.contact-item p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.contact-item a {
   color: #1d4ed8;
   text-decoration: none;
+  font-weight: 500;
 }
 
-#contact-information a:hover {
+.contact-item a:hover {
   text-decoration: underline;
 }
+
+.contact-message {
+  margin-top: 1rem;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #contact-information {
+    padding: 1.5rem;
+  }
+
+  .contact-grid {
+    gap: 20px;
+  }
+}
+
 
 /* =========================
    TEAM PAGE
