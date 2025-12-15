@@ -45,7 +45,7 @@ body {
 
 
 h1, h2, h3 {
-  color: #111827;
+  color: #f2f3f7;
   margin-top: 0;
 }
 
@@ -71,7 +71,7 @@ h3 {
 p, li {
   font-size: 1rem;
   line-height: 1.6;
-  color: #374151;
+  color: #f8fafd;
 }
 
 ul {
@@ -212,8 +212,8 @@ ul {
 }
 
 #about-page .about-section {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;      /* Soft professional border */
+    background: #ffffff04;
+    border: 1px solid #ffffff04;      /* Soft professional border */
     border-radius: 8px;             /* Smoother corners */
     padding: 2.5rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
@@ -225,7 +225,7 @@ ul {
 
 
 .about-section + .about-section {
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #ffffff;
     margin-top: 2rem;
     padding-top: 2rem;
 }
@@ -274,7 +274,7 @@ ul {
 #target-clients,
 #our-approach,
 #why-partner {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.033);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   
@@ -309,7 +309,7 @@ ul {
 #why-partner h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #0f172a;
+  color: #eff1f5;
   text-align: center;
 }
 
@@ -317,7 +317,7 @@ ul {
 #core-services h3 {
   font-size: 1.3rem;
   margin-top: 1.5rem;
-  color: #0f172a;
+  color: #f4f5f7;
   border-left: 3px solid #0ea5e9;
   padding-left: 10px;
 }
@@ -337,14 +337,14 @@ ul {
 #why-partner li {
   margin-bottom: .6rem;
   line-height: 1.6;
-  color: #374151;
+  color: #fafafa;
 }
 
 /* Single paragraph section */
 #target-clients p {
   line-height: 1.7;
   margin-top: 1rem;
-  color: #374151;
+  color: #fdfefe;
   font-size: 1.05rem;
 }
 
@@ -361,18 +361,18 @@ ul {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #111827;
+  color: #ffffff;
 }
 
 .contact-subtitle {
   font-size: 1.1rem;
-  color: #4b5563;
+  color: #ffffff;
   margin-bottom: 2.5rem;
 }
 
 /* Contact Card */
 #contact-information {
-  background: white;
+  background: rgba(255, 255, 255, 0.036);
   border-radius: 12px;
   padding: 2.5rem;
   margin: 3rem auto;
@@ -397,13 +397,13 @@ ul {
 
 .contact-item h3 {
   font-size: 1.2rem;
-  color: #111827;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .contact-item p {
   font-size: 1rem;
-  color: #374151;
+  color: #f9f9f9;
   line-height: 1.5;
 }
 
@@ -419,7 +419,7 @@ ul {
 
 .contact-message {
   margin-top: 1rem;
-  color: #374151;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -440,7 +440,7 @@ ul {
    TEAM PAGE
    ========================= */
 .team-section {
-  background: white;
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 4px;
   padding: 2rem;
   margin: 2rem auto;
@@ -461,13 +461,13 @@ ul {
 
 .team-card h3 {
   margin-bottom: 0.25rem;
-  color: #111827;
+  color: #ffffff;
 }
 
 .team-card p {
   margin: 0;
   font-weight: 500;
-  color: #374151;
+  color: #fdfeff;
 }
 
 /* =========================
@@ -511,7 +511,7 @@ ul {
 
 /* Individual Card */
 .team-card {
-  background: #ffffff;
+  background: #fefefefa;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -540,7 +540,7 @@ ul {
 .team-card .team-position {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #111827;
+  color: #081323;
   margin-bottom: 8px;
 }
 
